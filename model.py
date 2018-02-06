@@ -73,7 +73,7 @@ def create_model(learn_rate = 0.0001):
       
     model.add(Dense(1))
     adam = Adam(lr=learn_rate)
-    model.compile(optimizer=adam, loss="mse")
+    model.compile(optimizer=adam, loss="mse") # since we're predicting continous driving angle, it make sense to use the mse loss.
 
     return model
 
